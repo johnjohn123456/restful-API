@@ -5,7 +5,7 @@ const {Todo} = require('./models/todo');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser());
 
@@ -46,6 +46,6 @@ app.get('/todos/:id', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('server is running on port');
 });
